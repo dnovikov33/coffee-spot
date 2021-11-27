@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -62,6 +63,10 @@ export default {
       target: 'https://my-json-server.typicode.com/dnovikov33/coffee-spot/',
       pathRewrite: { '^/api/': '' },
     },
+  },
+
+  alias: {
+    components: resolve(__dirname, './components'),
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
