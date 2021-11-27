@@ -2,25 +2,54 @@
   "orders": [
     {
       "id": 1,
-      "ordered": "2021-06-03T12:30:48.000000Z",
-      "receiveDate": "2021-06-03T12:30:48.000000Z",
+      "ordered_date": "2021-06-03T12:30:48.000000Z",
+      "receive_date": "2021-06-03T12:30:48.000000Z",
+      "approved": {
+        "date": "2021-06-04T12:30:48.000000Z",
+        "user": {
+          "name": "Настя"
+        }
+      },
       "agent": {
         "name": "Молоко"
       },
-      "isReceived": false,
       "amount": 3452,
       "items": [
         {
-          "id": 123,
+          "id": 121,
           "name": "Молоко",
           "amount": 24,
           "price": 234
         },
         {
-          "id": 123,
+          "id": 122,
           "name": "Молоко растительное",
           "price": 122,
           "amount": 24
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ordered_date": "2021-06-03T12:30:48.000000Z",
+      "receive_date": "2021-06-03T12:30:48.000000Z",
+      "approved": false,
+      "agent": {
+        "name": "МТ деливери"
+      },
+      "amount": 1245,
+      "items": [
+        {
+          "id": 123,
+          "name": "Стакан-250",
+          "amount": 100,
+          "price": 1000
+        },
+        {
+          "id": 124,
+          "name": "Крышка d-80",
+          "price": 400,
+          "amount": 10
         }
       ]
     }
