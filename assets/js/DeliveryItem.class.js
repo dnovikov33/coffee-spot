@@ -5,6 +5,7 @@ class DeliveryItem {
     this.name = get(init, 'name', '')
     this.price = get(init, 'price', 0)
     this.amount = get(init, 'amount', 0)
+    this.measure = get(init, 'measure', '')
   }
 }
 

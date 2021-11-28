@@ -53,23 +53,28 @@
     </el-table-column>
     <el-table-column label="Действия" min-width="300">
       <template slot-scope="scope">
-        <el-button size="mini" @click="$router.push(`/order/${scope.row.id}`)">
-          Подробнее
-        </el-button>
-        <el-button
-          type="primary"
-          size="mini"
-          @click="$emit('handleApprove', $event)"
-        >
-          Принять
-        </el-button>
-        <el-button
-          size="mini"
-          type="danger"
-          @click="$emit('handleDelete', $event)"
-        >
-          Удалить
-        </el-button>
+        <el-button-group>
+          <el-button
+            size="mini"
+            @click="$router.push(`/order/${scope.row.id}`)"
+          >
+            Подробнее
+          </el-button>
+          <el-button
+            size="mini"
+            @click="$emit('handleApprove', $event)"
+            type="success"
+          >
+            <i class="el-icon-check"></i>
+          </el-button>
+          <el-button
+            size="mini"
+            type="danger"
+            @click="$emit('handleDelete', $event)"
+          >
+            Удалить
+          </el-button>
+        </el-button-group>
       </template>
     </el-table-column>
   </el-table>
