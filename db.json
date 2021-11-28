@@ -3,8 +3,8 @@
     {
       "id": 1,
       "ordered_date": "2021-06-03T12:30:48.000000Z",
-      "receive_date": "2021-06-03T12:30:48.000000Z",
-      "approved": {
+      "delivery_date": "2021-06-03T12:30:48.000000Z",
+      "received": {
         "date": "2021-06-04T12:30:48.000000Z",
         "user": {
           "name": "Настя"
@@ -16,42 +16,79 @@
       "amount": 3452,
       "items": [
         {
-          "id": 121,
+          "id": 4,
           "name": "Молоко",
           "amount": 24,
-          "price": 234
+          "price": 234,
+          "measure":"л"
         },
         {
-          "id": 122,
+          "id": 1,
           "name": "Молоко растительное",
           "price": 122,
-          "amount": 24
+          "amount": 24,
+          "measure": "л"
         }
       ]
     },
     {
       "id": 2,
       "ordered_date": "2021-06-03T12:30:48.000000Z",
-      "receive_date": "2021-06-03T12:30:48.000000Z",
-      "approved": false,
+      "delivery_date": "2021-06-03T12:30:48.000000Z",
+      "received": {},
       "agent": {
         "name": "МТ деливери"
       },
       "amount": 1245,
       "items": [
         {
-          "id": 123,
+          "id": 3,
           "name": "Стакан-250",
           "amount": 100,
-          "price": 1000
+          "price": 1000,
+          "measure": "шт"
         },
         {
-          "id": 124,
+          "id": 2,
           "name": "Крышка d-80",
           "price": 400,
-          "amount": 10
+          "amount": 10,
+          "measure": "шт"
         }
       ]
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Молоко растительное",
+      "measure": "л"
+    },
+    {
+      "id": 2,
+      "name": "Крышка d-80",
+      "measure": "шт"
+    },
+    {
+      "id": 3,
+      "name": "Стакан-250",
+      "measure": "шт"
+    },
+
+    {
+      "id": 4,
+      "name": "Молоко",
+      "measure":"л"
+    }
+  ],
+  "agents": [
+    {
+      "id": 1,
+      "name": "Молоко"
+    },
+    {
+      "id": 2,
+      "name": "МТ деливери"
     }
   ]
 }

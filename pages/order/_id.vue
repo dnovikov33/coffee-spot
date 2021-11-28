@@ -12,7 +12,7 @@
     </el-row>
     <el-row>
       <el-col>
-        <CreateOrUpdateOrder v-if="order" order="order" />
+        <CreateOrUpdateOrder v-if="order" :order="order" />
       </el-col>
     </el-row>
   </el-row>

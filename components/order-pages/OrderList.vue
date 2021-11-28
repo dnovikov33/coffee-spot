@@ -37,7 +37,7 @@
       min-width="120"
     >
       <template slot-scope="scope">
-        <div class="receiver-cell" v-if="scope.row.isReceived">
+        <div class="receiver-cell" v-if="scope.row.received.isReceived">
           <span style="margin-right: 10px">
             {{ scope.row.received.user.name }}
           </span>
@@ -86,9 +86,9 @@ export default {
   },
   methods: {
     tableRowClassName({ row }) {
-      if (row.isReceived === true) {
+      if (row.received.isReceived === true) {
         return 'received-row'
-      } else if (row.isReceived === false) {
+      } else if (row.received.isReceived === false) {
         return 'waiting-row'
       }
       return ''

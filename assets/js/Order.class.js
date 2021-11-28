@@ -8,13 +8,13 @@ class Order {
   constructor(init) {
     this.id = get(init, 'id', 0)
     this.amount = get(init, 'amount', 0)
-    this.received = has(init, 'approved')
+    this.received = has(init, 'received')
       ? new ReceivedEvent(init.approved)
       : new ReceivedEvent()
     this.orderedDate = has(init, 'ordered_date')
       ? new Date(init.ordered_date)
       : false
-    this.deliveryDate = has(init, 'receive_date')
+    this.deliveryDate = has(init, 'delivery_date')
       ? new Date(init.receive_date)
       : false
     this.items = has(init, 'items')
@@ -29,10 +29,6 @@ class Order {
 
   get deliveryDateFormatted() {
     return format(this.deliveryDate, 'dd.MM.yyyy')
-  }
-
-  get isReceived() {
-    return !!this.received.date
   }
 }
 
