@@ -20,7 +20,7 @@
           "name": "Молоко",
           "amount": 24,
           "price": 234,
-          "measure":"л"
+          "measure": "л"
         },
         {
           "id": 1,
@@ -78,7 +78,7 @@
     {
       "id": 4,
       "name": "Молоко",
-      "measure":"л"
+      "measure": "л"
     }
   ],
   "agents": [
