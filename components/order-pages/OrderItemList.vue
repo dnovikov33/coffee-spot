@@ -7,9 +7,9 @@
       max-height="500"
       :data="list"
     >
-      <el-table-column min-width="150" prop="name" label="Название">
+      <el-table-column min-width="200" prop="name" label="Название">
       </el-table-column>
-      <el-table-column min-width="100" prop="amount" label="Количество">
+      <el-table-column min-width="200" prop="amount" label="Количество">
         <template slot-scope="scope">
           <el-input-number
             :min="1"

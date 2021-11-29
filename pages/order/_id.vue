@@ -19,6 +19,7 @@
     <el-row>
       <el-col>
         <CreateOrUpdateOrder v-if="order" :order="order" />
+        <el-skeleton v-else :rows="10" animated />
       </el-col>
     </el-row>
     <el-dialog

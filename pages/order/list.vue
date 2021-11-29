@@ -22,6 +22,18 @@
         </el-col>
       </el-row>
     </el-col>
+
+    <el-dialog
+      title="Удалить заказ"
+      :visible.sync="deleteOrderDialog"
+      width="50%"
+    >
+      <div>Вы действительно хотите удалить заказ</div>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="deleteOrderDialog = false">Отменить</el-button>
+        <el-button type="primary" @click="deleteOrder"> Подтвердить </el-button>
+      </span>
+    </el-dialog>
   </el-row>
 </template>
 
@@ -35,6 +47,7 @@ export default {
     return {
       tableData: [],
       loading: true,
+      deleteOrderDialog: false,
     }
   },
   created() {
@@ -55,7 +68,11 @@ export default {
       console.log(index, row)
     },
     handleDelete(index, row) {
-      console.log(index, row)
+      this.deleteOrderDialog = true
+    },
+    deleteOrder() {
+      // delete order
+      this.deleteOrderDialog = false
     },
   },
 }

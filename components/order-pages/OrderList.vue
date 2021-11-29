@@ -7,7 +7,6 @@
     style="width: 100%"
     max-height="500"
     empty-text="Нет созданных заказов"
-    @row-click="rowClickHandler"
   >
     <el-table-column type="expand">
       <template slot-scope="props">
@@ -62,7 +61,7 @@
           </el-button>
           <el-button
             size="mini"
-            @click="$emit('handleApprove', $event)"
+            @click="$emit('handle-approve', $event)"
             type="success"
           >
             <i class="el-icon-check"></i>
@@ -70,7 +69,7 @@
           <el-button
             size="mini"
             type="danger"
-            @click="$emit('handleDelete', $event)"
+            @click="$emit('handle-delete', $event)"
           >
             Удалить
           </el-button>
